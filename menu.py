@@ -3,6 +3,7 @@ from colorama import Fore, Back
 from colorama import init
 init(autoreset=True)
 
+
 def show_rules():
     print(Back.GREEN + 'Rules:')
     print("1. Deposit money to start.")
@@ -15,3 +16,17 @@ def show_rules():
     print("8. Have fun!")
     print(Back.CYAN + "Press Enter to go back to the main menu...")
     input()
+
+
+def play_game():
+    os.system('python main.py')
+
+
+def quit_program():
+    print('Thank you for using the program, {}. Hope to see you again!'.format(username))
+    exit()
+
+def main():
+    global username
+    username = input("Please enter your name: ")
+    print('Welcome, {}! '.format(username))
