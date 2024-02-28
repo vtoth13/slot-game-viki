@@ -75,15 +75,15 @@ def print_slot_machine(columns):
 
 def deposit():
     while True:
-        amount = input("What would you like to deposit? $")
+        amount = input(Fore.GREEN + Style.BRIGHT + "What would you like to deposit? $")
         if amount.isdigit():
             amount = int(amount)
             if amount > 0:
                 break
             else:
-                print("Amount must be greater than 0.")
+                print(Fore.RED + Style.BRIGHT + 'Amount must be greater than 0.')
         else:
-            print("Please enter a number.")
+            print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
 
     return amount
 
@@ -97,9 +97,9 @@ def get_number_of_lines():
             if 1 <= lines <= MAX_LINES:
                 break
             else:
-                print("Please enter a valid number.")
+                print(Fore.RED + Style.BRIGHT + 'Please enter a valid number.')
         else:
-            print("Please enter a number.")
+            print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
 
     return lines
 
@@ -112,9 +112,9 @@ def get_bet():
             if MIN_BET <= amount <= MAX_BET:
                 break
             else:
-                print(f"Amount must be between ${MIN_BET} - ${MAX_BET}.")
+                print(Fore.RED + Style.BRIGHT + f"Amount must be between ${MIN_BET} - ${MAX_BET}.")
         else:
-            print("Please enter a number.")
+            print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
 
     return amount
 
@@ -127,7 +127,7 @@ def spin(balance):
 
         if total_bet > balance:
             print(
-                f"You don't have enough to bet that amount, your current balance is: ${balance}")
+                Fore.YELLOW + Style.BRIGHT + f"You don't have enough to bet that amount, your current balance is: ${balance}")
             return False
         else:
             break
@@ -138,20 +138,20 @@ def spin(balance):
     slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
     print_slot_machine(slots)
     winnings, winning_lines = check_winnings(slots, lines, bet, symbol_value)
-    print(f"You won ${winnings}.")
-    print(f"You won on lines:", *winning_lines)
+    print(Fore.GREEN + Style.BRIGHT + f"You won ${winnings}.")
+    print(Fore.WHITE + Style.BRIGHT + f"You won on lines:", *winning_lines)
     return winnings - total_bet
 
 
 def main():
     balance = deposit()
     while balance > 0:
-        print(f"Current balance is ${balance}.")
-        answer = input("Press Enter to play (Q to Quit).")
+        print(Fore.YELLOW + f"Current balance is ${balance}.")
+        answer = input(f"Press Enter to play {Style.DIM}(Q to Quit){Style.RESET_ALL}: ")
         if answer == "q":
             break
         balance += spin(balance)
     
-    print(f"Game over! You left with ${balance}")
+    print(Fore.BLUE + f"Game over! You left with ${balance}")
 
 main()

@@ -1,5 +1,5 @@
 import os
-from colorama import Fore, Back
+from colorama import Fore, Back, Style
 from colorama import init
 init(autoreset=True)
 
@@ -23,20 +23,20 @@ def play_game():
 
 
 def quit_program():
-    print('Thank you for using the program, {}. Hope to see you again!'.format(username))
+    print(Fore.MAGENTA + Style.BRIGHT + 'Thank you for using the program, {}. Hope to see you again!'.format(username))
     exit()
 
 def main():
     global username
     username = input("Please enter your name: ")
-    print('Welcome, {}! '.format(username))
+    print(Fore.CYAN + Style.BRIGHT + 'Welcome, {}! '.format(username))
 
     while True:
         print(Back.BLUE + 'Menu:')
         print("1. Rules")
         print("2. Play Game")
         print("3. Quit")
-        choice = input(Fore.YELLOW + 'Please enter your choice: ')
+        choice = input(Fore.YELLOW + 'Please enter your choice: ' + Fore.RESET)
 
         if choice == "1":
             show_rules()
@@ -45,7 +45,7 @@ def main():
         elif choice == "3":
             quit_program()
         else:
-            print('Invalid choice. Please enter a number from 1 to 3.')
+            print(Back.RED + Style.BRIGHT + 'Invalid choice. Please enter a number from 1 to 3.')
 
 if __name__ == "__main__":
     main()
