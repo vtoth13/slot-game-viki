@@ -30,3 +30,22 @@ def main():
     global username
     username = input("Please enter your name: ")
     print('Welcome, {}! '.format(username))
+
+    while True:
+        print(Back.BLUE + 'Menu:')
+        print("1. Rules")
+        print("2. Play Game")
+        print("3. Quit")
+        choice = input(Fore.YELLOW + 'Please enter your choice: ')
+
+        if choice == "1":
+            show_rules()
+        elif choice == "2":
+            play_game()
+        elif choice == "3":
+            quit_program()
+        else:
+            print('Invalid choice. Please enter a number from 1 to 3.')
+
+if __name__ == "__main__":
+    main()
