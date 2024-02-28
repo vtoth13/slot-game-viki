@@ -1,5 +1,8 @@
 import random
 from tkinter.tix import COLUMN
+from colorama import Fore, Back, Style
+from colorama import init
+init(autoreset=True)
 
 MAX_LINES = 3
 MAX_BET = 100
