@@ -139,3 +139,16 @@ def spin(balance):
     print(f"You won on lines:", *winning_lines)
     return winnings - total_bet
 
+
+def main():
+    balance = deposit()
+    while balance > 0:
+        print(f"Current balance is ${balance}.")
+        answer = input("Press Enter to play (Q to Quit).")
+        if answer == "q":
+            break
+        balance += spin(balance)
+    
+    print(f"Game over! You left with ${balance}")
+
+main()
