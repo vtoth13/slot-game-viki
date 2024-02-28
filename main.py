@@ -78,10 +78,10 @@ def deposit():
         amount = input(Fore.GREEN + Style.BRIGHT + "What would you like to deposit? $")
         if amount.isdigit():
             amount = int(amount)
-            if amount > 0:
+            if 0 < amount <= 500:
                 break
             else:
-                print(Fore.RED + Style.BRIGHT + 'Amount must be greater than 0.')
+                print(Fore.RED + Style.BRIGHT + 'Amount must be between 1 and 500.')
         else:
             print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
 
