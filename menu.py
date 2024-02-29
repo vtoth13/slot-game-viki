@@ -1,9 +1,11 @@
+# Import necessary modules
 import os
 from colorama import Fore, Back, Style
 from colorama import init
-init(autoreset=True)
+init(autoreset=True) # Initialize colorama to automatically reset colors
 
 
+# Function to display the rules of the game
 def show_rules():
     print(Back.GREEN + 'Rules:')
     print("1. Deposit money to start.")
@@ -18,14 +20,18 @@ def show_rules():
     input()
 
 
+# Function to start the game
 def play_game():
     os.system('python main.py')
 
 
+# Function to quit the program
 def quit_program():
     print(Fore.MAGENTA + Style.BRIGHT + 'Thank you for using the program, {}. Hope to see you again!'.format(username))
     exit()
 
+
+# Main function to interact with the user
 def main():
     global username
     username = input("Please enter your name: ")
@@ -38,6 +44,7 @@ def main():
         print("3. Quit")
         choice = input(Fore.YELLOW + 'Please enter your choice: ' + Fore.RESET)
 
+        # Branch based on user choice
         if choice == "1":
             show_rules()
         elif choice == "2":
@@ -47,5 +54,6 @@ def main():
         else:
             print(Back.RED + Style.BRIGHT + 'Invalid choice. Please enter a number from 1 to 3.')
 
+# Entry point of the program
 if __name__ == "__main__":
     main()
