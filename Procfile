@@ -1,1 +1,1 @@
-web: sh setup.sh && stremlit run menu.py
+web: node index.js
