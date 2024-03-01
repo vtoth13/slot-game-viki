@@ -117,7 +117,7 @@ def deposit():
         int: Deposit amount entered by the user.
     """
     while True: # Infinite loop until valid input is received
-        amount = input(Fore.GREEN + Style.BRIGHT + "What would you like to deposit? $")
+        amount = input(Fore.GREEN + Style.BRIGHT + "What would you like to deposit? $\n")
         if amount.isdigit(): # Checking if input is a digit
             amount = int(amount) # Converting input to an integer
             if 0 < amount <= 500: # Validating if input is within the range of 1 to MAX_LINES
@@ -134,7 +134,7 @@ def deposit():
 def get_number_of_lines():
     while True:
         lines = input(
-            f"Enter the number of lines to bet on (1-{MAX_LINES})? ")
+            f"Enter the number of lines to bet on (1-{MAX_LINES})? \n")
         if lines.isdigit(): # Checking if input is a digit
             lines = int(lines)
             if 1 <= lines <= MAX_LINES: # Validating if input is within the range of 1 to MAX_LINES
@@ -150,7 +150,7 @@ def get_number_of_lines():
 # Function to prompt the user to input the bet amount for each line
 def get_bet():
     while True:
-        amount = input("What would you like to bet on each line? $")
+        amount = input("What would you like to bet on each line? $\n")
         if amount.isdigit(): # Checking if input is a digit
             amount = int(amount)
             if MIN_BET <= amount <= MAX_BET: # Validating if input is within the range of MIN_BET to MAX_BET
@@ -204,7 +204,7 @@ def main():
     balance = deposit() # Get the initial deposit amount from the player
     while balance > 0: # Continue playing as long as the balance is positive
         print(Fore.YELLOW + f"Current balance is ${balance}.") # Print current balance
-        answer = input(f"Press Enter to play {Style.DIM}(Q to Quit){Style.RESET_ALL}: ") # Prompt user to play or quit
+        answer = input(f"Press Enter to play {Style.DIM}(Q to Quit){Style.RESET_ALL}: \n") # Prompt user to play or quit
         if answer == "q": # Check if user wants to quit
             break
         balance += spin(balance) # Simulate a spin of the slot machine and update balance accordingly
