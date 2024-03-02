@@ -1,4 +1,5 @@
 # Slot Machine Game
+![Mockup](documentation/mockup.png)
 The link to the [slot game](https://slot-game-viki-306267ff362d.herokuapp.com/)
 
 This project implements a simple command-line slot machine game in Python. Players can deposit money, place bets, and spin the slot machine to win prizes. The game offers multiple lines for betting and displays the outcome of each spin.
