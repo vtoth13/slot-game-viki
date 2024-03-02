@@ -59,6 +59,11 @@ This project implements a simple command-line slot machine game in Python. Playe
 
   ![Goodbye Message](documentation/goodbye_message.png)
 
+## Flowchart
+The flowchart represents the logic of the application:
+
+![Flowchart](documentation/flowchart.png)
+
 ## Requirements
 
 - Python 3.9.6
