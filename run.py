@@ -34,8 +34,14 @@ def quit_program():
 # Main function to interact with the user
 def main():
     global username
-    username = input("Please enter your name: ")
-    print(Fore.CYAN + Style.BRIGHT + 'Welcome, {}! '.format(username))
+    while True:
+        username = input("Please enter your name: ")
+        if username.strip() == '' or username.isdigit():
+            print(Back.RED + Style.BRIGHT + 'Invalid username. Please enter a valid name that is not empty and does not consist of only numbers.')
+        else:
+            print(Fore.CYAN + Style.BRIGHT + 'Welcome, {}! '.format(username))
+            break
+
 
     while True:
         print(Back.BLUE + 'Menu:')
