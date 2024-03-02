@@ -1,8 +1,10 @@
 import random
 from colorama import Fore, Style, init
 
+# Initialize colorama for colored terminal output
 init(autoreset=True)
 
+# Constants
 MAX_LINES = 3
 MAX_BET = 100
 MIN_BET = 1
@@ -10,6 +12,7 @@ MIN_BET = 1
 ROWS = 3
 COLS = 3
 
+# Define the count of each symbol and its corresponding value
 symbol_count = {
     "A": 2,
     "B": 4,
@@ -24,6 +27,7 @@ symbol_value = {
     "D": 2
 }
 
+# Function to check if there are any winning lines and calculate the winnings
 def check_winnings(columns, lines, bet, values):
     winnings = 0
     winning_lines = []
@@ -38,6 +42,7 @@ def check_winnings(columns, lines, bet, values):
             winning_lines.append(line + 1)
     return winnings, winning_lines
 
+# Function to generate a spin of the slot machine
 def get_slot_machine_spin(rows, cols, symbols):
     all_symbols = []
     for symbol, symbol_count in symbols.items():
@@ -55,6 +60,7 @@ def get_slot_machine_spin(rows, cols, symbols):
         columns.append(column)
     return columns
 
+# Function to print the slot machine
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -64,6 +70,7 @@ def print_slot_machine(columns):
                 print(column[row], end="")
         print()
 
+# Function to deposit money into the balance
 def deposit():
     while True:
         amount = input(Fore.GREEN + Style.BRIGHT + "What would you like to deposit? $")
@@ -77,6 +84,7 @@ def deposit():
             print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
     return amount
 
+# Function to get the number of lines the player wants to bet on
 def get_number_of_lines():
     while True:
         lines = input(
@@ -91,6 +99,7 @@ def get_number_of_lines():
             print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
     return lines
 
+# Function to get the bet amount from the player
 def get_bet():
     while True:
         amount = input("What would you like to bet on each line? $")
@@ -104,6 +113,7 @@ def get_bet():
             print(Fore.RED + Style.BRIGHT + 'Please enter a number.')
     return amount
 
+# Function to perform a spin on the slot machine
 def spin(balance):
     lines = get_number_of_lines()
     while True:
@@ -127,6 +137,7 @@ def spin(balance):
     print(Fore.WHITE + Style.BRIGHT + f"You won on lines:", *winning_lines)
     return winnings - total_bet
 
+# Main function to run the slot machine game
 def main():
     balance = deposit()
     while balance > 0:
@@ -138,4 +149,5 @@ def main():
     
     print(Fore.BLUE + f"Game over! You left with ${balance}")
 
+# Run the main function to start the game
 main()
