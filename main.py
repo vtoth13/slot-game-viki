@@ -1,4 +1,5 @@
 import random 
+import tkinter
 from tkinter.tix import COLUMN # Importing COLUMN from tkinter.tix module
 from colorama import Fore, Back, Style # Importing color constants from colorama module
 from colorama import init # Importing color initialization function from colorama module
