@@ -34,7 +34,7 @@ def quit_program():
 # Main function to interact with the user
 def main():
     global username
-    username = input("Please enter your name:")
+    username = input("Please enter your name: ")
     print(Fore.CYAN + Style.BRIGHT + 'Welcome, {}! '.format(username))
 
     while True:
@@ -42,7 +42,7 @@ def main():
         print("1. Rules")
         print("2. Play Game")
         print("3. Quit")
-        choice = input(Fore.YELLOW + 'Please enter your choice:' + Fore.RESET)
+        choice = input(Fore.YELLOW + 'Please enter your choice: ' + Fore.RESET)
 
         # Branch based on user choice
         if choice == "1":
