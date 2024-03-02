@@ -1,6 +1,31 @@
 # Slot Machine Game
+The link to the [slot game](https://slot-game-viki-306267ff362d.herokuapp.com/)
 
 This project implements a simple command-line slot machine game in Python. Players can deposit money, place bets, and spin the slot machine to win prizes. The game offers multiple lines for betting and displays the outcome of each spin.
+
+## How to Play
+
+1. **Start the game**: Click this [link](https://dashboard.heroku.com/apps/slot-game-viki/deploy/github) or copy this text: `https://dashboard.heroku.com/apps/slot-game-viki/deploy/github` and paste it into your browser's address bar.
+2. **Run the program**: As soon as the page is loaded, click 'RUN PROGRAM'.
+3. **Introduce yourself**: Follow the prompts to introduce yourself to the program.
+4. **Learn the rules**: Read and understand the rules presented.
+5. **Play the game**: Type the words and numbers according to the instructions and hit 'Enter' on your keyboard to try your luck.
+6. **Play again**: Play one more time with different amounts for even more fun.
+7. **Quit the game**: When you're done, choose "Quit" and send the link to this program to your friends!
+
+## User Stories
+
+1. As a player, I want to be able to deposit money into the game so that I can start playing with a balance.
+   
+2. As a player, I want to learn the rules of the game so that I can understand how to play effectively.
+
+3. As a player, I want to be able to place bets on multiple lines to increase my chances of winning.
+
+4. As a player, I want the game to display the outcome of each spin clearly so that I can see if I've won or lost.
+
+5. As a player, I want to have a user-friendly interface with clear instructions so that I can easily navigate and enjoy the game.
+
+6. As a player, I want to be able to quit the game so that I can stop playing when I'm finished.
 
 ## Features
 
@@ -39,30 +64,6 @@ This project implements a simple command-line slot machine game in Python. Playe
 - Python 3.9.6
 - colorama library (install via `pip install colorama`)
 - simple term menu (install via `pip install simple-term-menu`)
-
-## How to Play
-
-1. **Start the game**: Click this [link](https://dashboard.heroku.com/apps/slot-game-viki/deploy/github) or copy this text: `https://dashboard.heroku.com/apps/slot-game-viki/deploy/github` and paste it into your browser's address bar.
-2. **Run the program**: As soon as the page is loaded, click 'RUN PROGRAM'.
-3. **Introduce yourself**: Follow the prompts to introduce yourself to the program.
-4. **Learn the rules**: Read and understand the rules presented.
-5. **Play the game**: Type the words and numbers according to the instructions and hit 'Enter' on your keyboard to try your luck.
-6. **Play again**: Play one more time with different amounts for even more fun.
-7. **Quit the game**: When you're done, choose "Quit" and send the link to this program to your friends!
-
-## User Stories
-
-1. As a player, I want to be able to deposit money into the game so that I can start playing with a balance.
-   
-2. As a player, I want to learn the rules of the game so that I can understand how to play effectively.
-
-3. As a player, I want to be able to place bets on multiple lines to increase my chances of winning.
-
-4. As a player, I want the game to display the outcome of each spin clearly so that I can see if I've won or lost.
-
-5. As a player, I want to have a user-friendly interface with clear instructions so that I can easily navigate and enjoy the game.
-
-6. As a player, I want to be able to quit the game so that I can stop playing when I'm finished.
 
 ## Technologies Used
 
