@@ -17,7 +17,7 @@ def show_rules():
     print("7. Keep playing until balance runs out or choose to quit.")
     print("8. Have fun!")
     print(Back.CYAN + "Press Enter to go back to the main menu...")
-    input("\n")
+    input()
 
 
 # Function to start the game
@@ -34,7 +34,7 @@ def quit_program():
 # Main function to interact with the user
 def main():
     global username
-    username = input("Please enter your name: \n")
+    username = input("Please enter your name:")
     print(Fore.CYAN + Style.BRIGHT + 'Welcome, {}! '.format(username))
 
     while True:
@@ -42,7 +42,7 @@ def main():
         print("1. Rules")
         print("2. Play Game")
         print("3. Quit")
-        choice = input(Fore.YELLOW + 'Please enter your choice: \n' + Fore.RESET)
+        choice = input(Fore.YELLOW + 'Please enter your choice:' + Fore.RESET)
 
         # Branch based on user choice
         if choice == "1":
