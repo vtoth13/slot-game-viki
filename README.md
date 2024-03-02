@@ -50,6 +50,20 @@ This project implements a simple command-line slot machine game in Python. Playe
 6. **Play again**: Play one more time with different amounts for even more fun.
 7. **Quit the game**: When you're done, choose "Quit" and send the link to this program to your friends!
 
+## User Stories
+
+1. As a player, I want to be able to deposit money into the game so that I can start playing with a balance.
+   
+2. As a player, I want to learn the rules of the game so that I can understand how to play effectively.
+
+3. As a player, I want to be able to place bets on multiple lines to increase my chances of winning.
+
+4. As a player, I want the game to display the outcome of each spin clearly so that I can see if I've won or lost.
+
+5. As a player, I want to have a user-friendly interface with clear instructions so that I can easily navigate and enjoy the game.
+
+6. As a player, I want to be able to quit the game so that I can stop playing when I'm finished.
+
 ## Technologies Used
 
 ### Languages
